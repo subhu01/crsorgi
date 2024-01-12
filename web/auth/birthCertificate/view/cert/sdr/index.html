@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/web/css/bootstrap.css">
+    <link rel="stylesheet" href="/web/css/style.css" />
+    <link rel="shortcut icon" href="/web/images/favicon.ico" type="image/x-icon">
+    <script src="/web/js/script.js"></script>
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+            --link-color: blue;
+        }
+
+        .dark-theme {
+            --bg-color: black;
+            --text-color: white;
+            --link-color: gray;
+        }
+
+        /* Add your other CSS styles here */
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Your HTML content here -->
+
+    <div class="main_content">
+        <header>
+            <div class="logo">
+                <h1>
+
+                    <span class="on">Online
+                    </span> <span class="ce">Center</span>
+                </h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#"> Contact Us <i class="fas fa-caret-down"></i> </a>
+                        <div class="dropdown_menu">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="/image/facebook.png" alt="" /></a>
+                                </li>
+                                <li><a href="#"><img src="/image/instagram.png" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/image/twitter.png" alt="" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="login_btn">
+                <button onclick="window.location.href = 'Login.html' " type="submit">Login</button>
+            </div>
+        </header>
+    </div>
+    <form action="" method="get">
+        <section class="onl">
+            <section class="choose__option" aria-required="true">
+                <div class="content">
+                    <div class="form">ऑनलाइन फॉर्म के प्रकार</div>
+                    <div class="selector">
+                        <select name="formtype" id="" class="opt" required>
+                            <option class="slct" value="" aria-required="true">
+                                फॉर्म का चयन करे
+                            </option>
+                            <option class="types" value="1">आधार कार्ड</option>
+                            <option class="types" value="2">जाति प्रमाण पत्र</option>
+                            <option class="types" value="3">निवास प्रमाण पत्र</option>
+                            <option class="types" value="4">आय प्रमाण पत्र</option>
+                            <option class="types" value="5">पैन कार्ड</option>
+                            <option class="types" value="6">वोटर कार्ड</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="choose__option">
+                <div class="content">
+                    <div class="form">राज्य</div>
+                    <div class="selector">
+                        <select name="state" id="" class="opt" required>
+                            <option value="" class="slct">
+                                अपना राज्य चुने</option>
+                            <option value="35">ANDAMAN AND NICOBAR ISLANDS</option>
+                            <option value="28">ANDHRA PRADESH</option>
+                            <option value="12">ARUNACHAL PRADESH</option>
+                            <option value="18">ASSAM</option>
+                            <option value="10">BIHAR</option>
+                            <option value="4">CHANDIGARH</option>
+                            <option value="22">CHHATTISGARH</option>
+                            <option value="26">DADRA AND NAGAR HAVELI</option>
+                            <option value="25">DAMAN AND DIU</option>
+                            <option value="7">DELHI</option>
+                            <option value="30">GOA</option>
+                            <option value="24">GUJARAT</option>
+                            <option value="6">HARYANA</option>
+                            <option value="2">HIMACHAL PRADESH</option>
+                            <option value="1">JAMMU AND KASHMIR</option>
+                            <option value="20">JHARKHAND</option>
+                            <option value="29">KARNATAKA</option>
+                            <option value="32">KERALA</option>
+                            <option value="31">LAKSHADWEEP</option>
+                            <option value="23">MADHYA PRADESH</option>
+                            <option value="27">MAHARASHTRA</option>
+                            <option value="14">MANIPUR</option>
+                            <option value="17">MEGHALAYA</option>
+                            <option value="15">MIZORAM</option>
+                            <option value="13">NAGALAND</option>
+                            <option value="21">ODISHA</option>
+                            <option value="34">PUDUCHERRY</option>
+                            <option value="3">PUNJAB</option>
+                            <option value="8">RAJASTHAN</option>
+                            <option value="11">SIKKIM</option>
+                            <option value="33">TAMIL NADU</option>
+                            <option value="36">TELANGANA</option>
+                            <option value="12">TRIPURA</option>
+                            <option value="5">UTTARAKHAND</option>
+                            <option value="9">UTTAR PRADESH</option>
+                            <option value="19">WEST BENGAL</option>
+                        </select>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="choose__option">
+                <div class="content">
+                    <div class="form">जिला</div>
+                    <div class="selector">
+                        <select name="district" id="" class="opt" required>
+                            <option value="" class="slct">
+                                अपना जिला चुने</option>
+                            <option value="02">ARARIA</option>
+                            <option value="03">ARWAL</option>
+                            <option value="04">AURANGABAD</option>
+                            <option value="05">BANKA</option>
+                            <option value="06">BEGUSARAI</option>
+                            <option value="07">BHAGALPUR</option>
+                            <option value="08">BHOJPUR</option>
+                            <option value="09">BUXAR</option>
+                            <option value="010">DARBHANGA</option>
+                            <option value="011">EAST CHAMPARAN (MOTIHARI)</option>
+                            <option value="012">GAYA</option>
+                            <option value="013">GOPALGANJ</option>
+                            <option value="014">JAMUI</option>
+                            <option value="015">JEHANABAD</option>
+                            <option value="016">KAIMUR</option>
+                            <option value="017">KATIHAR</option>
+                            <option value="018">KHAGARIA</option>
+                            <option value="019">KISHANGANJ</option>
+                            <option value="020">LAKHISARAI</option>
+                            <option value="021">MADHEPURA</option>
+                            <option value="022">MADHUBANI</option>
+                            <option value="023">MUNGER</option>
+                            <option value="024">MUZAFFARPUR</option>
+                            <option value="025">NALANDA</option>
+                            <option value="026">NAWADA</option>
+                            <option value="027">PATNA</option>
+                            <option value="028">PURNIA</option>
+                            <option value="029">ROHTASH</option>
+                            <option value="030">SAHARASA</option>
+                            <option value="031">SAMASTIPUR</option>
+                            <option value="032">SARAN</option>
+                            <option value="033">SHEIKHPURA</option>
+                            <option value="34">SHEOHAR</option>
+                            <option value="035">SITAMARHI</option>
+                            <option value="036">SIWAN</option>
+                            <option value="037">SUPAUL</option>
+                            <option value="038">VAISHALI</option>
+                            <option value="039">WEST CHAMPARAN</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="choose__option">
+                <div class="content">
+                    <div class="form">प्रखंड</div>
+                    <div class="selector">
+                        <select name="block" id="" class="opt" required>
+                            <Option value="" class="slct">अपना प्रखंड चुने</Option>
+                            <option value="040">KANTI</option>
+                            <option value="041">KURHANI</option>
+                            <option value="042">MARWAN</option>
+                            <option value="043">MOTIPUR</option>
+                            <option value="044">PAROO</option>
+                            <option value="045">SAHEBGANJ</option>
+                            <option value="046">SARAIYA</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="choose__option">
+                <div class="content">
+                    <div class="form">पंचायत</div>
+                    <div class="selector">
+                        <select name="panchayat" id="" class="opt" required>
+                            <Option value="" class="slct">अपना पंचायत चुने</Option>
+                            <option value="047">AMAITHA</option>
+                            <option value="048">AMBARATEJ SINGH</option>
+                            <option value="049">BAHILWARA RUPNATH NORTH</option>
+                            <option value="050">BAHILWARA RUPNATH SOUTH</option>
+                            <option value="051">BAHILWAR GOBIND </option>
+                            <option value="052">BAKHRA</option>
+                            <option value="053">BASAITHA</option>
+                            <option value="054">BERUA</option>
+                            <option value="055">CHAK IBRAHIN</option>
+                            <option value="056">CHAKNA</option>
+                            <option value="057">DATAPUR PUNCH BHINDA</option>
+                            <option value="058">GINJAS</option>
+                            <option value="059">GOPIDHANWAT</option>
+                            <option value="060">GOPINATHPUR DOKRA</option>
+                            <option value="061">GORGAMADIH</option>
+                            <option value="062">KAHIRA</option>
+                            <option value="063">KOLHUA</option>
+                            <option value="064">MADHAUL</option>
+                            <option value="065">MANIKPUR</option>
+                            <option value="066">MARWAPAKAR</option>
+                            <option value="067">NARANGI JIWNATH</option>
+                            <option value="068">POKHRAIIRA</option>
+                            <option value="069">RAJA RAMPUR</option>
+                            <option value="070">RAM KRISHAN DUBIYAHI</option>
+                            <option value="071">REPORA RAMPUR BALI</option>
+                            <option value="072">REPURA RAMPUR BISNATH</option>
+                            <option value="073">REWA BASANTPUR NORTH</option>
+                            <option value="074">REWA BASANTPUR SOUTH</option>
+                            <option value="075">RUPAULI</option>
+                            <option value="076">SARAIYA</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="data">
+            <h2>कृप्या अपना विवरण दर्ज करे :-</h2>
+        </div>
+        <section id="prs_dtl">
+            <div class="personal__details">
+                <div class="name">
+                    <span>First Name :</span>
+                    <input type="text" name="first name" id="" required>
+                </div>
+                <div class="name">
+                    <span>Last Name :</span>
+                    <input type="text" name="last name" id="" required>
+                </div>
+                <div class="name">
+                    <span>Father's Name :</span>
+                    <input type="text" name="father name" id="" required>
+                </div>
+                <div class="name">
+                    <span>Mother's Name :</span>
+                    <input type="text" name="mother name" id="" required>
+                </div>
+                <div class="name">
+                    <span>Contact Number :</span>
+                    <input type="tel" name="" id="" maxlength="10" required>
+                </div>
+            </div>
+            <div class="second_page">
+                <div class="name">
+                    <span>E-mail :</span>
+                    <input type="email" name="" id="" required>
+                </div>
+                <div class="name">
+                    <span>Village :</span>
+                    <input type="text" name="" id="" required>
+                </div>
+                <div class="name">
+                    <span>Post Office :</span>
+                    <input type="text" name="" id="" required>
+                </div>
+                <div class="name">
+                    <span>Police Station :</span>
+                    <input type="text" name="" id="" required>
+                </div>
+                <div class="name">
+                    <span>Ward No. :</span>
+                    <input type="tel" name="" id="" required maxlength="2">
+                </div>
+            </div>
+        </section>
+        <div class="upload">
+            <h2>कृप्या अपना दस्तावेज अपलोड करे :-</h2>
+        </div>
+        <section class="upl">
+            <div class="document">
+                <div class="photo_add">
+                    <b>Recent Passport Size Photo:-</b>
+                    <input type="file" name="" id="" required>
+                </div>
+                <div class="photo_add">
+                    <b>Copy of Aadhaar (Front & Back):-</b>
+                    <input type="file" name="" id="" required>
+                </div>
+            </div>
+        </section>
+        <div class="submit_btn">
+            <button>Submit</button>
+        </div>
+    </form>
+    <div class="grid_con">
+    <div class="submit_btn ">
+        <button onclick="window.location.href = './web/auth/birthCertificate/view/cert/B/amth/VWYWlucEgxVlZxWn.html' ">Click
+            Here</button>
+    </div>
+    <div class="submit_btn">
+        <button onclick="window.location.href = './web/auth/birthCertificate/view/cert/g p d h/g p d h.html' ">Click
+            Here</button>
+    </div>
+    <div class="submit_btn">
+        <button onclick="window.location.href = './web/auth/birthCertificate/view/cert/s d  r/s d  r.html' ">Click
+            Here</button>
+    </div>
+    <div class="submit_btn">
+        <button onclick="window.location.href = './web/auth/birthCertificate/view/cert/s r s y/s r s y .html' ">Click
+            Here</button>
+    </div>
+    </div>
+
+    <script>
+        document.onclick = hideMenu;
+        document.oncontextmenu = rightClick;
+
+        function hideMenu() {
+            document.getElementById("contextMenu")
+                .style.display = "none"
+        }
+
+        function rightClick(e) {
+            alert("This Function is not allowed here")
+            e.preventDefault();
+
+            if (document.getElementById("contextMenu")
+                .style.display == "block")
+                hideMenu();
+            else {
+                var menu = document.getElementById("contextMenu")
+
+                menu.style.display = 'block';
+                menu.style.left = e.pageX + "px";
+                menu.style.top = e.pageY + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>
