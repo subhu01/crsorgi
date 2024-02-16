@@ -290,7 +290,7 @@ document.onkeydown = function(e) {
                           <table id="printCertificationForm">
                             <tr>
                               <td>
-                                <table class="certificate-border-normal" border="0" cellpadding="0" cellspacing="0"
+                                <table class="certificate-border-normal" style="border: 1.5px solid #636363;" border="0" cellpadding="0" cellspacing="0"
                                   width="800">
                                   <tbody>
                                     <tr>
@@ -299,12 +299,12 @@ document.onkeydown = function(e) {
                                     <tr>
                                       <td>&nbsp;</td>
                                       <td>
-                                        <table class="certificate-border-bold" border="0" cellpadding="0"
+                                        <table class="certificate-border-bold" style="border: 3px solid #636363;" border="0" cellpadding="0"
                                           cellspacing="0" width="831">
                                           <tbody>
                                             <tr>
                                               <td valign="top" width="588">
-                                                <table class="certificate-border-bold" border="0" cellpadding="0"
+                                                <table class="certificate-border-bold"  border="0" cellpadding="0"
                                                   cellspacing="0" width="831" style="text-transform:uppercase">
                                                   <tbody>
 
@@ -989,8 +989,8 @@ document.onkeydown = function(e) {
                               </td>
                               <td>&nbsp;</td>
                               <td class="btn">
-                                <input class="btn" value="Home" type="button"
-                                  onclick="document.location.href='/web/index.php/';" />
+                                <input class="btn" id="printButton" value="Home" type="button"
+                                  onclick="printWindow()" />
                               </td>
                             </tr>
                           </table>
@@ -1017,6 +1017,12 @@ document.onkeydown = function(e) {
     <!--END FROM HERE TO BI-LINGUAL CERTIFICATE ONLY 31-DECE-2014 BY PAWAN-->
 
   </table>
+  <script>
+    function printWindow() {
+      
+        window.print();
+    }
+  </script>
 </body>
 
 </html>
