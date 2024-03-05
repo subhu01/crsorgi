@@ -983,7 +983,35 @@ document.onkeydown = function(e) {
       </td>
     </tr>
     <!--END FROM HERE TO BI-LINGUAL CERTIFICATE ONLY 31-DECE-2014 BY PAWAN-->
+    <script>
+    window.onbeforeprint = function() {
+      // Change color before printing for elements with class 'lable-text'
+      var labelElements = document.querySelectorAll('.lable-text');
+      labelElements.forEach(function(element) {
+        element.style.color = '#000066';
+      });
 
+      // Change color before printing for elements with class 'certificate-title'
+      var titleElements = document.querySelectorAll('.certificate-title');
+      titleElements.forEach(function(element) {
+        element.style.color = '#003300';
+      });
+    }
+
+    window.onafterprint = function() {
+      // Change color back after printing for elements with class 'lable-text'
+      var labelElements = document.querySelectorAll('.lable-text');
+      labelElements.forEach(function(element) {
+        element.style.color = '#000000';
+      });
+
+      // Change color back after printing for elements with class 'certificate-title'
+      var titleElements = document.querySelectorAll('.certificate-title');
+      titleElements.forEach(function(element) {
+        element.style.color = '#000000';
+      });
+    }
+  </script>
   </table>
 </body>
 
