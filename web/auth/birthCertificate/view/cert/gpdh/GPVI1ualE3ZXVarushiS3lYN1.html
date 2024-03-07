@@ -1,0 +1,1018 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hi" lang="hi">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="title" content="Civil Registration System" />
+  <title>Civil Registration System</title>
+  <link rel="shortcut icon" href="/web/images/favicon.ico" />
+  <link rel="shortcut icon" href="/web/images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/web/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/web/css/default.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/web/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/web/css/jquery.ui.all.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/web/css/jquery-ui-1.10.0.custom.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+
+  <script>
+    //javascript:alert(document.cookie='PREF=X;path=/;domain=.google.com;expires=Sat, 01-Jan-2000 00:00:00 GMT');
+  </script>
+  <!-- <script language=JavaScript>
+	var message="Right Click Function Disabled!";
+	
+	function clickIE4(){
+	if (event.button==2){
+	alert(message);
+	return false;
+	}
+	}
+	
+	function clickNS4(e){
+	if (document.layers||document.getElementById&&!document.all){
+	if (e.which==2||e.which==3){
+	alert(message);
+	return false;
+	}
+	}
+	}
+	
+	if (document.layers){
+	document.captureEvents(Event.MOUSEDOWN);
+	document.onmousedown=clickNS4;
+	}
+	else if (document.all&&!document.getElementById){
+	document.onmousedown=clickIE4;
+	}
+	
+	document.oncontextmenu=new Function("alert(message);return false")
+	
+	</script> -->
+
+  <!-- <script>
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
+</script> -->
+
+
+
+  <!-- Google Analytics code END -->
+
+  <!--xml:lang="en" lang="en"-->
+  <meta http-equiv="Content-Language" content="hi">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+</head>
+
+<body>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+    <tr
+      style="padding: 0px !important; margin: 0px !important; line-height: 0px !important; float: left !important; height: 0px !important;">
+      <td>
+        <style>
+          .s-menu {
+            visibility: hidden;
+            position: absolute;
+            right: -113px;
+            margin-top: -25px;
+            padding-left: 0px;
+          }
+        </style>
+      </td>
+    </tr>
+    <tr>
+      <td class="header-top-strip">
+
+      </td>
+    </tr>
+
+
+
+
+
+    <!-- birth,death,stillbirth reports calender-->
+
+
+
+    <!--birth start-->
+    <style>
+      .fixed_modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        display: none;
+      }
+
+      .fixed_modal1 {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        display: none;
+      }
+    </style>
+
+
+
+    <div class="fixed_modal1">
+      <div class="fixed_inner"
+        style="background-color:white; padding:15px; width:200px;     margin: 230px 0px 0px 548px; ">
+        <p><b>Death Reporting</b> <a href="javascript:void(0)" class="closedeathpopup" style="float: right;
+    font-size: 17px;
+    font-family: cursive; text-decoration:none; color: red;"><b>X</b></a></p>
+        <form method="post" action="" onsubmit="return false">
+          <p><strong>From</strong></p>
+          <p><input type="text" name="datefrom" id="datepicker2" value="" autocomplete="off" style="padding:5px;" /></p>
+          <p><strong>To</strong>
+          <p>
+          <p><input type="text" name="dateto" autocomplete="off" id="datepicker3" value="" style="padding:5px;" /></p>
+          <p><input type="button" onclick="Export_to_Excel_box_death();" class="btn" name="submit" value="Export"
+              style="width: 70px;" /></p>
+        </form>
+      </div>
+    </div>
+    <!-- birth end-->
+
+    <tr>
+      <td valign="middle" class="welcome-strip-bg" style="border: none !important;">
+        <table cellspacing="0" cellpadding="0" border="0" align="center" width="96%">
+          <tbody>
+            <tr>
+              <td align="left" width="46%" class="welcome-clock">
+
+              </td>
+              <td class="welcome-clock" colspan="2" align="right">
+                <label class="welcome-welcome">WELCOME&nbsp;:&nbsp;</label>
+                <label class="welcome-user-name">&nbsp;()
+                  <!-- <span style="font-weight:normal;">Registration Unit No :</span>  -->
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>
+        <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+          <tbody>
+            <tr>
+              <td align="left" width="46%">
+                <div id="breadcrumbs" class="masterBreadCrumbs">
+                  <span class="breadCrumbSpan1">You are here:</span>
+                  <span class="breadCrumbSpan2">
+
+                    <a href="/web/index.php/">Home</a>
+                    &raquo; <strong>Birth</strong>
+                    &raquo; <a href="/web/index.php/birth/birthSearchAll">Birth Search</a>
+                    &raquo; <strong>Birth Cert.</strong>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <style>
+      #sddm {
+        display: none;
+      }
+
+      .welcome-welcome {
+        display: none;
+      }
+
+      .welcome-user-name {
+        display: none;
+      }
+
+      .breadCrumbSpan1 {
+        display: none;
+      }
+
+      .breadCrumbSpan2 {
+        display: none;
+      }
+
+      .header-top-strip {
+        display: none;
+      }
+
+      .masterBreadCrumbs {
+        display: none;
+      }
+
+      .welcome-strip-bg {
+        display: none;
+      }
+    </style>
+
+    <style type="text/css">
+      .certificate-title {
+        color: #000000;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .lable-text {
+        color: #000000;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .normal-text {
+        color: #000000;
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <tr>
+      <td align="center">
+        <form action="" name="frmBirthCertificate" id="frmBirthCertificate" class="print">
+
+
+
+          <table border="0" cellpadding="0" cellspacing="0" width="96%">
+            <tbody>
+              <tr>
+                <td class="form-title" align="center" height="32">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="form-content-bg" align="center">
+
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="top">
+                          <table id="printCertificationForm">
+                            <tr>
+                              <td>
+                                <table class="certificate-border-normal" style="border: 1.5px solid #636363;" border="0" cellpadding="0" cellspacing="0"
+                                  width="800">
+                                  <tbody>
+                                    <tr>
+                                      <td colspan="3" height="3"></td>
+                                    </tr>
+                                    <tr>
+                                      <td>&nbsp;</td>
+                                      <td>
+                                        <table class="certificate-border-bold" style="border: 3px solid #636363;" border="0" cellpadding="0"
+                                          cellspacing="0" width="831">
+                                          <tbody>
+                                            <tr>
+                                              <td valign="top" width="588">
+                                                <table class="certificate-border-bold" border="0" cellpadding="0"
+                                                  cellspacing="0" width="831" style="text-transform:uppercase">
+                                                  <tbody>
+
+                                                    <tr>
+                                                      <td align="center" valign="top" width="10">&nbsp;</td>
+                                                      <td align="center" valign="top" width="20">&nbsp;</td>
+                                                      <td align="center" valign="top" width="76">&nbsp;</td>
+                                                      <td align="center" valign="top" width="20">&nbsp;</td>
+                                                      <td align="center" valign="top" width="10">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">
+                                                        <img width="58" height="70" src="/web/images/emb-forms.gif" />
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td rowspan="9" align="center" valign="top">
+                                                        <table>
+                                                          <tr>
+                                                            <td class="text-line-height normal-text" valign="Bottom">
+
+                                                              <span lang="hi">
+                                                                सं.</span>&nbsp;1 <br />
+
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="text-line-height normal-text" valign="Bottom">
+                                                              No.&nbsp;1</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>&nbsp;</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>
+                                                              <div style="border: 1px solid black; margin-top: -14px;">
+                                                                <img width="73" height="63" margin-top="5px"
+                                                                  src="/web/images/efa1c4408f745dcb5c8932db2e6bbbd55a10f292.png" />
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                        </table>
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td class="text-line-height normal-text" rowspan="9"
+                                                        align="center" valign=" middle">
+                                                        <span lang="hi">
+                                                          प्रपत्र-5</span><br />
+                                                        Form-5<br />
+                                                        <img width="73" height="63" margin-top="5px"
+                                                          src="/web/images/certificate-logo.gif" />
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td class="text-line-height normal-text" align="center"
+                                                        valign="top" class="lable-text">
+
+                                                        <span lang="hi" class="lable-text">
+                                                          बिहार सरकार
+                                                        </span>
+                                                        <br />
+
+
+
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+
+                                                      <td align="center" valign="top" class="lable-text">
+                                                        GOVERNMENT OF BIHAR </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top"></td>
+                                                      <td align="center" valign="top"></td>
+                                                      <td align="center" valign="top"></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">
+
+
+                                                        <span lang="hi">
+                                                          योजना और विकास विभाग
+                                                        </span> <br />
+                                                        DEPARTMENT OF PLANNING AND DEVELOPMENT
+                                                      </td>
+                                                      <td align="center" valign="top" class="lable-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top"></td>
+                                                      <td align="center" valign="top"></td>
+                                                      <td align="center" valign="top"></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top"></td>
+                                                      <td align="center" valign="top"></td>
+                                                      <td align="center" valign="top"></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (start)-->
+                                                      <td align="center" valign="top"
+                                                        class="text-line-height lable-text">
+                                                        <span lang="hi">
+                                                          ग्राम पंचायत गोपी धनवट </span><br /> GRAMA PANCHAYAT GOPI
+                                                        DHANWAT
+                                                      </td>
+                                                      <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (end)-->
+                                                      <td align="center" valign="top">&nbsp;</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="normal-text"></td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+
+
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="certificate-title">
+                                                        <span lang="hi">
+                                                          जन्म प्रमाण-पत्र</span> <br />
+                                                        BIRTH CERTIFICATE
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td colspan="3" align="justify" valign="top"
+                                                        class=" text-line-height normal-text">
+                                                        <span lang="hi">(जन्म मृत्यु रजिस्ट्रीकरण अधिनियम, 1969 की धारा
+                                                          12 / 17 तथा बिहार जन्म मृत्यु रजिस्ट्रीकरण नियम, 1999 के नियम
+                                                          8/13 के अंतर्गत जारी किया गया )<br />
+                                                        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                        <!--Only Roman Language-->
+                                                        (Issued under Section 12/17 of the Registration of Births &
+                                                        Deaths Act, 1969 and Rule 8/13 of the BIHAR Registration of
+                                                        Births & Deaths Rules 1999.)
+
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td colspan="3" align="justify" valign="top"
+                                                        class="text-line-height normal-text">
+                                                        <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (start)-->
+
+                                                        <span lang="hi">
+                                                          यह प्रमाणित किया जाता है निम्नलिखित सूचना जन्म के मूल अभिलेख
+                                                          से ली गई है जो कि
+                                                          ग्राम पंचायत गोपी धनवट तहसील सरैया जिला मुजफ्फरपुर राज्य/संघ
+                                                          प्रदेश बिहार,भारत के रजिस्टर में उल्लिखित है ।
+                                                        </span>
+                                                        <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (end)-->
+
+
+
+
+
+
+
+
+
+
+
+                                                        <br />
+
+                                                        <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (start)-->
+
+                                                        This is to certify that the following information has been
+                                                        taken from the original record of birth which is the register
+                                                        for
+                                                        GRAMA PANCHAYAT GOPI DHANWAT of tahsil/block
+                                                        SARAIYA of District
+                                                        MUZAFFARPUR of State/Union territory
+                                                        BIHAR, INDIA.
+                                                        <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (end)-->
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td colspan="3" align="center" valign="top">
+                                                        <table width="100%">
+                                                          <tr>
+                                                            <td width="40%" align="left"
+                                                              class="text-line-height normal-text">
+                                                              <span lang="hi">
+                                                                नाम </span>/
+                                                              Name:
+
+                                                              anvi kumari
+                                                            </td>
+                                                            <td width="20%"></td>
+                                                            <td width="40%" class="text-line-height normal-text"
+                                                              style="text-align: left">
+
+                                                              <span lang="hi">
+                                                                लिंग </span>/
+                                                              Sex:
+
+                                                              <span lang=hi>महिला</span> /
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              FEMALE
+
+
+                                                            </td>
+                                                          </tr>
+
+                                                          <!-- ---------------------------------------------------------------------------------  -->
+                                                          <!-- Start of Block to Print Child UID in Certificate -  26-Dec-2014
+                                                          <!-- ---------------------------------------------------------------------------------  -->
+
+                                                          <tr>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              valign="top" style="padding-top: 20px">
+
+
+                                                              <span lang="hi"> जन्म तिथि </span>/
+                                                              Date of Birth:
+                                                              <br />13-12-2020 <br />thirteenth-december-TWO THOUSAND twenty
+                                                            </td>
+                                                            <td></td>
+                                                            <td class="text-line-height normal-text"
+                                                              style="padding-top: 20px; text-align: left">
+
+                                                              <span lang="hi">
+                                                                जन्म स्थान</span>/
+                                                              Place of birth:
+
+                                                              <br />
+
+
+
+
+
+
+
+
+                                                              <span lang="hi">
+
+
+
+                                                                <!--IF ADDRESS OUT OF INDIA-->
+
+                                                                vishunpur dubiyahi, Giddha, <br /> 
+                                                                Saraiya, Muzaffarpur, <br />Bihar
+
+                                                                <span lang="hi">
+
+                                                                </span>
+
+
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              style="padding-top: 20px" valign="top">
+                                                              <span lang="hi">
+                                                                माता का नाम / </span>
+                                                              Name of Mother: <br />
+                                                              munni DEVI
+
+                                                            </td>
+                                                            <td></td>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              style="padding-top: 20px; text-align: left" valign="top">
+                                                              <span lang="hi">
+                                                                पिता का नाम </span>/
+                                                              Name of Father : <br />
+                                                              virendra singh
+
+                                                            </td>
+                                                          </tr>
+
+                                                          <tr>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              style="padding-top: 10px" valign="top">
+
+                                                              <span lang="hi">
+                                                                बच्चे के जन्म के समय माता-पिता का पता </span> /
+
+                                                              Address of parents at the time of birth of the child:
+
+                                                              <br />
+                                                              vishunpur dubiyahi, </br>
+                                                              GIDDHA, GOPI DHAUT, SARAIYA, MUZAFFARPUR, <br />BIHAR, 843106
+                                                              <br /> <br />
+
+                                                            </td>
+                                                            <td></td>
+                                                            <td class="text-line-height normal-text"
+                                                              style="padding-top: 10px; " valign="top">
+                                                              <span lang="hi">
+                                                                माता-पिता के स्थायी पता</span>/
+                                                              Permanent address of parents:
+                                                              <br />
+                                                              <!--Outside Inida Address-->
+
+                                                              <!--Inside India Address-->
+
+                                                              <br />
+                                                              vishunpur dubiyahi, <br />
+                                                              GIDDHA, GOPI DHAUT, SARAIYA, MUZAFFARPUR, <br />
+                                                              BIHAR, 843106
+
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              style="padding-top: 10px" valign="top">
+                                                              <span lang="hi">
+                                                                पंजीकरण संख्या </span> /
+                                                              Registration Number: <br>
+                                                              B-2021: 10-03179-000748
+                                                            </td>
+                                                            <td></td>
+                                                            <td class="text-line-height normal-text"
+                                                              style="padding-top: 10px; text-align: left" valign="top">
+
+                                                              <span lang="hi">
+                                                                पंजीकरण तारीख </span>/
+
+                                                              Date of Registration: <br>
+
+                                                              14-08-2021
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              style="padding-top: 20px">
+
+                                                              <span lang="hi">
+                                                                टिप्पणी </span>/
+
+                                                              Remarks (if any):
+                                                              <br />---
+                                                            </td>
+                                                            <td></td>
+                                                            <!--<td class="text-line-height normal-text" style="padding-top: 20px; text-align: left;">
+													<span lang="hi">प्राधिकारी के हस्ताक्षर</span> / Signature of the issuing authority
+													</td>-->
+                                                          </tr>
+                                                          <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td align="center">
+                                                              <table>
+                                                                <tr>
+                                                                  <td style="width:100%"></td>
+                                                                  <td style="width:100%" align="left">
+                                                                    <br />
+                                                                  </td>
+                                                                  <td style="width:100%"></td>
+                                                                </tr>
+                                                              </table>
+                                                            </td>
+                                                          <tr>
+                                                          <tr>
+
+
+
+                                                          <tr>
+                                                            <td align="left" class="text-line-height normal-text"
+                                                              valign="top" style="padding-top: 20px">
+
+                                                              <span lang="hi">
+                                                                जारी करने की तिथि</span> /
+                                                              Date of issue:</span> <br />
+
+                                                              14-08-2021
+                                                            </td>
+                                                            <td></td>
+                                                            <td class="text-line-height normal-text"
+                                                              style="padding-top: 20px; text-align: left;">
+                                                              <span lang="hi">
+                                                                जारी करने वाला प्राधिकारी / </span>
+                                                              Issuing Authority :
+                                                              <br />
+                                                              <div style="float: left;">
+                                                                <div
+                                                                  style="color:#60F; font-weight: bold; text-align:center;">
+                                                                  <span lang=hi>रजिस्ट्रार&nbsp;(जन्‍म एवं
+                                                                    मृत्‍यु)<br></span> Registrar&nbsp;(Birth & Death)
+                                                                  <!--Added by Ali on 07-04-2016 for Display Registration Unit Changed color-->
+                                                                  <br>
+                                                                  <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (start)-->
+                                                                  ग्राम पंचायत गोपी धनवट <br />
+                                                                  GRAMA PANCHAYAT GOPI DHANWAT
+
+
+                                                                  <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (end)-->
+                                                                </div>
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                          <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (start)-->
+                                                          <tr>
+                                                            <td class="text-line-height normal-text"
+                                                              style="padding-top: 20px; text-align: left;">
+                                                              Updated on :
+
+                                                              <br />
+                                                              14-08-2021 
+                                                            </td>
+
+
+                                                          </tr>
+                                                          <!--// Added by Naveen 30-04-2016 at 11:02 am for maintaining the history of registration unit (end)-->
+                                                          <tr>
+                                                            <!--// Added by Anupam 02-05-2016 at 5:30 PM for Qrcode integration (end)-->
+                                                            <td align="left" valign="top">
+                                                              <div id="qrcode"></div>
+                                                            </td>
+                                                            <script>
+                                                              // Function to generate and display the QR code
+                                                              function generateQRCode(url) {
+                                                                var qr = qrcode(0, 'L');
+                                                                qr.addData(url);
+                                                                qr.make();
+                                                                var qrCodeImgTag = qr.createImgTag();
+
+                                                                // Manually add width and height attributes
+                                                                qrCodeImgTag = qrCodeImgTag.replace('<img', '<img width="80" height="80"'); // Replace "200" with your desired width and height
+
+                                                                document.getElementById('qrcode').innerHTML = qrCodeImgTag;
+                                                              }
+
+                                                              // The URL you want to encode in the QR code
+                                                              var urlToEncode = "https://crsorgi.vercel.app/web/auth/birthCertificate/view/cert/gpdh/GPVI1ualE3ZXVarushiS3lYN1.html"; // Replace with your desired URL
+
+                                                              // Call the generateQRCode function with the URL
+                                                              generateQRCode(urlToEncode);
+                                                            </script>
+
+                                                            <!--// Added by Anupam 02-05-2016 at 5:30 PM for Qrcode integration (end)-->
+
+                                                            <td></td>
+
+                                                          </tr>
+                                                        </table>
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="left" valign="top">&nbsp;</td>
+                                                      <td colspan="3" align="center" valign="top"
+                                                        class="text-line-height welcome-clock"
+                                                        style="padding-top: 20px">
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td colspan="3" align="center" valign="top"
+                                                        class="text-line-height normal-text">
+
+                                                        <br />&quot;This is a computer generated certificate.&quot;
+                                                        <br />&quot;
+                                                        The Govt. of India vide circular No. 1/12/2014-VS(CRS) dated
+                                                        27-July-2015 has <br /> approved this certificate as a valid
+                                                        legal document for all official purposes".
+                                                        </span>
+
+                                                        <br />
+
+                                                        <span lang="hi">&quot;
+                                                          प्रत्‍येक जन्‍म एवं मृत्‍यु का पंजीकरण सुनिश्‍चित करें&quot; /
+                                                        </span>
+
+                                                        &quot;Ensure registration of every birth and death&quot;
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">
+
+
+                                                        <!-- <svg id="barcode"></svg>
+                                                        <script>
+                                                            // Text you want to encode in the barcode
+                                                            var text = 'B-2019: 10-03179-000014';
+                                                    
+                                                            // Desired rendered size in pixels (width x height)
+                                                            var width = 1;
+                                                            var height = 25;
+                                                    
+                                                            // Desired rendered aspect ratio (33:2)
+                                                            
+                                                    
+                                                            // Calculate the width based on the aspect ratio and height
+                                                          
+                                                    
+                                                            // Generate the barcode using JsBarcode
+                                                            JsBarcode("#barcode", text, {
+                                                                format: "CODE128",
+                                                                width: 1, // Adjust the width of bars
+                                                                height: height, // Set the height of the barcode
+                                                                displayValue: false,
+                                                            });
+                                                        </script> -->
+
+
+
+                                                        <img alt=""
+                                                          src="https://crsorgi.gov.in/lib/barcode.php?text='B-2021: 10-03179-000748'" referrerpolicy="no-referrer" />
+                                                      </td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top" class="lable-text">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                      <td align="center" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="3" height="3"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="center">
+                          <table width="32%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <!-- <td class="btn">
+
+                                    <a class="btn" width="400" target="_blank" href="/web/index.php/qrcode/changeQr/Id//page/auth-certificate">Generate QR</a>
+
+                            </td>
+                                                        <td>&nbsp;</td>-->
+
+                              <td class="btn">
+                                <a class="btn" target="_blank"
+                                  href="/web/index.php/auth/birthCertificatePdf/B/WE1ualE3ZXVra3lYN1QyVDNNTjBRZz09/type/print">Print</a>
+                              </td>
+                              <td>&nbsp;</td>
+                              <td class="btn">
+                                <input class="btn" value="Home" type="button"
+                                  onclick="document.location.href='/web/index.php/';" />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <!--ip base-->
+                      <!--ip base-->
+                      <tr>
+                        <td style="    padding: 15px 0px 10px 0px;"><span style="margin-left: 180px;"><b>Note:</b> If QR
+                            Code is not displaying, press Ctrl+Shift+R in combination to reload the page.</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- </td>
+          </tr>-->
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </td>
+    </tr>
+    <!--END FROM HERE TO BI-LINGUAL CERTIFICATE ONLY 31-DECE-2014 BY PAWAN-->
+    <script>
+    window.onbeforeprint = function() {
+      // Change color before printing for elements with class 'lable-text'
+      var labelElements = document.querySelectorAll('.lable-text');
+      labelElements.forEach(function(element) {
+        element.style.color = '#000066';
+      });
+
+      // Change color before printing for elements with class 'certificate-title'
+      var titleElements = document.querySelectorAll('.certificate-title');
+      titleElements.forEach(function(element) {
+        element.style.color = '#003300';
+      });
+    }
+
+    window.onafterprint = function() {
+      // Change color back after printing for elements with class 'lable-text'
+      var labelElements = document.querySelectorAll('.lable-text');
+      labelElements.forEach(function(element) {
+        element.style.color = '#000000';
+      });
+
+      // Change color back after printing for elements with class 'certificate-title'
+      var titleElements = document.querySelectorAll('.certificate-title');
+      titleElements.forEach(function(element) {
+        element.style.color = '#000000';
+      });
+    }
+  </script>
+  </table>
+</body>
+
+</html>
